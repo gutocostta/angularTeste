@@ -1,4 +1,3 @@
-import { LoginComponent } from './login/login.component';
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, APP_INITIALIZER } from "@angular/core";
 
@@ -46,6 +45,13 @@ import {
 } from "@angular/material";
 import { RouteReuseStrategy } from "@angular/router";
 
+// pages...
+import { LoginComponent } from './login/login.component';
+import { AuthLayoutModule } from './auth-layout/auth-layout.module';
+import { PublicLayoutComponent } from './public-layout/public-layout.component';
+import { HeaderComponent } from './public-layout/header/header.component';
+import { FooterComponent } from './public-layout/footer/footer.component';
+
 export function initializeApp(environmentConfig: environment) {
   return (): Promise<AppConfig> => environmentConfig.load();
 }
@@ -67,11 +73,18 @@ const authorizationConfigFactory = (): AuthorizationConfig => {
 };
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    PublicLayoutComponent,
+    HeaderComponent,
+    FooterComponent
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    AuthLayoutModule,
     UikitModule,
     MatListModule,
     MatFormFieldModule,
