@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../environment';
 
 @Component({
   selector: 'app-public-layout',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicLayoutComponent implements OnInit {
 
-  constructor() { }
+  public name = environment.settings.name;
+  public production = environment.settings.production;
+  public estaAplicacaoSuportaHttpsEmProducao = false;
+
+  constructor() {}
 
   ngOnInit() {
   }

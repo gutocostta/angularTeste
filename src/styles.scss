@@ -3,3 +3,13 @@
 @import "~@cnj/uikit/lib/theme/uikit/prime-ng/uikit-prime-ng.scss";
 @import "~bootstrap/dist/css/bootstrap-grid.min.css";
 @import "~@cnj/uikit/lib/theme/uikit/toastr/toastr.css";
+
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #fff;
+  height: 100%;
+}

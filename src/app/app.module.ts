@@ -41,16 +41,22 @@ import { BUILD_ENVIRONMENT } from "src/build/build-environment";
 import {
   MatListModule,
   MatFormFieldModule,
-  MatSelectModule
+  MatSelectModule,
+  MatInputModule,
+  MatMenuModule,
+  MatTooltipModule,
 } from "@angular/material";
+
 import { RouteReuseStrategy } from "@angular/router";
 
 // pages...
 import { LoginComponent } from './login/login.component';
-import { AuthLayoutModule } from './auth-layout/auth-layout.module';
+import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { PublicLayoutComponent } from './public-layout/public-layout.component';
 import { HeaderComponent } from './public-layout/header/header.component';
 import { FooterComponent } from './public-layout/footer/footer.component';
+import { LoginRememberComponent } from './login-remember/login-remember.component';
+import { NewPassComponent } from './new-pass/new-pass.component';
 
 export function initializeApp(environmentConfig: environment) {
   return (): Promise<AppConfig> => environmentConfig.load();
@@ -77,18 +83,23 @@ const authorizationConfigFactory = (): AuthorizationConfig => {
     AppComponent,
     LoginComponent,
     PublicLayoutComponent,
+    AuthLayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoginRememberComponent,
+    NewPassComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AuthLayoutModule,
     UikitModule,
     MatListModule,
     MatFormFieldModule,
+    MatInputModule,
     MatSelectModule,
+    MatMenuModule,
+    MatTooltipModule,
     LogModule,
     NotFoundModule,
     UnauthorizedModule,

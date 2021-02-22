@@ -1,3 +1,21 @@
-<p>
-  header works!
-</p>
+<div class="header-bar">
+  <div class="row">
+      <div class="col">
+          <h2><span>CNJ</span> SEEU - Sistema Eletrônico de Execução Unificado </h2>
+      </div>
+      <div class="col">
+        <div class="header-nav">
+          <button mat-button [matMenuTriggerFor]="consulta">Consulta</button>
+          <mat-menu #consulta="matMenu" yPosition="below">
+              <button mat-menu-item>Pública</button>
+              <button mat-menu-item>Com chave de validação</button>
+          </mat-menu>
+
+          <button mat-button>Estatística</button>
+          <button mat-button>Sou Advogado</button>
+          <button mat-button>Legislação</button>
+        </div>
+
+      </div>
+  </div>
+</div>

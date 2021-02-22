@@ -1,0 +1,39 @@
+<div class="content-login">
+
+  <div class="row justify-content-center height-100">
+      <div class="col-4 align-self-center">
+          <div class="login-box">
+
+              <div class="logo text-center">
+                  <img src="../../assets/images/LOGOTIPO-SEEU-AZUL.png" alt="Fazendo Justiça">
+              </div>
+
+              <div class="login-form">
+                <form>
+                    <div class="form-line">
+                      <p>Cadastrar nova senha</p>
+                    </div>
+                    <div class="form-line">
+                      <mat-form-field color="primary" appearance="outline">
+                        <mat-label>Nova senha</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" placeholder="Nova Senha">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                      </mat-form-field>
+                    </div>
+                    <div class="form-line text-center">
+                      <button mat-raised-button color="primary">Confirmar</button>
+                    </div>
+                    <div class="form-line text-center">
+
+                    </div>
+                </form>
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+
+</div>

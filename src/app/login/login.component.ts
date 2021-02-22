@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  isLoggedIn: boolean;
+  isLoggedIn: boolean = false;
+  hide = true;
 
   constructor() { }
 
   ngOnInit() {
-    this.isLoggedIn = false;
+
+
+
+
   }
 
 }

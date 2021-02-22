@@ -1,3 +1,58 @@
-<p>
-  login works! llllllllllll
-</p>
+<div class="content-login">
+
+  <button mat-raised-button color="primary" class="btn-noticias">
+    <mat-icon aria-hidden="tru" aria-label="novidades" class="fas fa-bell"></mat-icon>
+    Novidades<span>4</span>
+  </button>
+
+  <div class="row justify-content-center height-100">
+      <div class="col-4 align-self-center">
+          <div class="login-box">
+
+              <div class="logo text-center">
+                  <img src="../../assets/images/LOGOTIPO-SEEU-AZUL.png" alt="Fazendo Justiça">
+              </div>
+
+              <div class="login-form">
+                <form>
+                    <div class="form-line">
+                      <mat-form-field color="primary" appearance="outline">
+                        <mat-label>Usuário</mat-label>
+                        <input matInput placeholder="Usuário">
+                      </mat-form-field>
+                      <button mat-icon-button #tooltip="matTooltip"
+                              matTooltip="Você pode acessar o SEEU com seu CPF sem dígitos ou com seu login. O acesso pelo login te redicionará para o perfil cadastrado (Parte em processo)."
+                              aria-tooltip="Informações sobre o usuário"
+                              class="info-btn">
+                        <mat-icon aria-hidden="false" aria-label="informações" class="fas fa-info-circle"></mat-icon>
+                      </button>
+
+                    </div>
+                    <div class="form-line">
+                      <mat-form-field color="primary" appearance="outline">
+                        <mat-label>Senha</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" placeholder="Senha">
+                        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                      </mat-form-field>
+                    </div>
+                    <div class="form-line text-center">
+                      <button mat-raised-button color="primary">Acessar</button>
+                    </div>
+                    <div class="form-line text-center">
+                      <p><a href="#/lembrar-senha" title="lembrar senha">Esqueci a senha</a></p>
+                    </div>
+                    <div class="certificado text-center">
+                        <p>Entrar com Certificado Digital</p>
+                        <!-- <mat-icon><i class="fa fa-info" aria-hidden="true"></i></mat-icon> -->
+                    </div>
+                </form>
+              </div>
+
+          </div>
+      </div>
+  </div>
+
+
+</div>

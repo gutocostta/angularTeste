@@ -1,3 +1,5 @@
+import { NewPassComponent } from './new-pass/new-pass.component';
+import { LoginRememberComponent } from './login-remember/login-remember.component';
 import { PublicLayoutComponent } from './public-layout/public-layout.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { AppComponent } from './app.component';
@@ -20,7 +22,15 @@ const routes: Routes = [
       },
       {
         path: 'login',
-        component: LoginComponent
+        component: LoginComponent,
+      },
+      {
+        path: 'lembrar-senha',
+        component: LoginRememberComponent,
+      },
+      {
+        path: 'nova-senha',
+        component: NewPassComponent,
       }
     ]
   },

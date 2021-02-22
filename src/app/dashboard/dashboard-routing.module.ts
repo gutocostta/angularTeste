@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { AuthenticationGuardService } from '@cnj/uikit';
-import { AuthLayoutComponent } from '../auth-layout/auth-layout.component';
+//import { AuthLayoutComponent } from '../auth-layout/auth-layout.component';
 
 const routes: Routes = [
   {path: '', component: DashboardComponent, data: { id: 1 } },
