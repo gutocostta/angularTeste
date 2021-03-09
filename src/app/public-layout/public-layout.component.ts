@@ -8,9 +8,9 @@ import { environment } from '../environment';
 })
 export class PublicLayoutComponent implements OnInit {
 
-  public name = environment.settings.name;
-  public production = environment.settings.production;
-  public estaAplicacaoSuportaHttpsEmProducao = false;
+  // public name = environment.settings.name;
+  // public production = environment.settings.production;
+  // public estaAplicacaoSuportaHttpsEmProducao = false;
 
   constructor() {}
 

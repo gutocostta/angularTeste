@@ -1,5 +1,4 @@
 import { OpenIDConnectSettings } from '@cnj/uikit';
-
 export interface AppConfig {
   name: string;
   production: boolean;
@@ -8,3 +7,4 @@ export interface AppConfig {
   };
   authentication: OpenIDConnectSettings;
 }
+

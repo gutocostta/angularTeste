@@ -4,7 +4,6 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { AppModule } from './app/app.module';
 
-
 import { enableAkitaProdMode, persistState, akitaConfig } from '@datorama/akita';
 import { BUILD_ENVIRONMENT } from './build/build-environment';
 

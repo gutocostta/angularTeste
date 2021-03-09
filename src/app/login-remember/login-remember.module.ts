@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardComponent } from './dashboard.component';
+import { PublicLayoutModule } from './../public-layout/public-layout.module';
+import { LoginRememberRoutingModule } from './login-remember-routing.module';
+import { LoginRememberComponent } from './login-remember.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
@@ -10,16 +10,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material';
-import { AuthLayoutModule } from './../auth-layout/auth-layout.module';
+
+import {
+  MatNativeDateModule,
+  MatSelectModule,
+  MatTooltipModule,
+} from '@angular/material';
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [LoginRememberComponent],
   imports: [
     CommonModule,
-    DashboardRoutingModule,
-    AuthLayoutModule,
+    LoginRememberRoutingModule,
+    PublicLayoutModule,
     MatCardModule,
     MatButtonModule,
     MatMenuModule,
@@ -27,9 +30,10 @@ import { AuthLayoutModule } from './../auth-layout/auth-layout.module';
     MatListModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSelectModule,
+    MatTooltipModule,
   ],
-  exports: [DashboardComponent]
+  exports: [LoginRememberComponent]
 })
-export class DashboardModule { }
+export class LoginRememberModule { }

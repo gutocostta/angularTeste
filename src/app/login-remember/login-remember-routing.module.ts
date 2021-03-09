@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login.component';
+import { LoginRememberComponent } from './login-remember.component';
 import { PublicLayoutComponent } from '../public-layout/public-layout.component';
 import { AuthenticationGuardService } from '@cnj/uikit';
 
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: 'lembrar-senha',
     component: PublicLayoutComponent,
     children: [
       {
         path: '',
-        component: LoginComponent
+        component: LoginRememberComponent
        },
     ]
   }
@@ -22,4 +22,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LoginRoutingModule { }
+export class LoginRememberRoutingModule { }

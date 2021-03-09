@@ -2,7 +2,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule, APP_INITIALIZER } from "@angular/core";
 
 import {
-  UikitModule,
   NotFoundModule,
   AuthModule,
   OidcAuthModule,
@@ -38,25 +37,22 @@ import { HttpClientModule } from "@angular/common/http";
 import { environment } from "./environment";
 import { AppConfig } from "./app-config.model";
 import { BUILD_ENVIRONMENT } from "src/build/build-environment";
-import {
-  MatListModule,
-  MatFormFieldModule,
-  MatSelectModule,
-  MatInputModule,
-  MatMenuModule,
-  MatTooltipModule,
-} from "@angular/material";
+// import {
+//   MatListModule,
+//   MatFormFieldModule,
+//   MatSelectModule,
+//   MatInputModule,
+//   MatMenuModule,
+//   MatTooltipModule,
+// } from "@angular/material";
 
-import { RouteReuseStrategy } from "@angular/router";
+import { NewPassModule } from './new-pass/new-pass.module';
+import { LoginRememberModule } from './login-remember/login-remember.module';
+import { LoginModule } from './login/login.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
-// pages...
-import { LoginComponent } from './login/login.component';
-import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
-import { PublicLayoutComponent } from './public-layout/public-layout.component';
-import { HeaderComponent } from './public-layout/header/header.component';
-import { FooterComponent } from './public-layout/footer/footer.component';
-import { LoginRememberComponent } from './login-remember/login-remember.component';
-import { NewPassComponent } from './new-pass/new-pass.component';
+import { RouteReuseStrategy, RouterModule } from "@angular/router";
+import { AuthLayoutModule } from "./auth-layout/auth-layout.module";
 
 export function initializeApp(environmentConfig: environment) {
   return (): Promise<AppConfig> => environmentConfig.load();
@@ -81,25 +77,16 @@ const authorizationConfigFactory = (): AuthorizationConfig => {
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    PublicLayoutComponent,
-    AuthLayoutComponent,
-    HeaderComponent,
-    FooterComponent,
-    LoginRememberComponent,
-    NewPassComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    UikitModule,
-    MatListModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatSelectModule,
-    MatMenuModule,
-    MatTooltipModule,
+    LoginModule,
+    LoginRememberModule,
+    NewPassModule,
+    DashboardModule,
+    AuthLayoutModule,
     LogModule,
     NotFoundModule,
     UnauthorizedModule,

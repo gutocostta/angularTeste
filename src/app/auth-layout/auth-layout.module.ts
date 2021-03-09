@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BrowserModule } from "@angular/platform-browser";
+import { RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 import { AuthLayoutComponent } from './auth-layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LOCATION_TOKEN } from '../app.component';
+
 import {
   UikitModule,
   NotFoundModule,
@@ -10,13 +13,14 @@ import {
   OidcAuthModule,
   UnauthorizedModule,
   LogModule,
-} from "@cnj/uikit";
+} from '@cnj/uikit';
 
 
 @NgModule({
   declarations: [AuthLayoutComponent],
   imports: [
     CommonModule,
+    RouterModule,
     BrowserModule,
     BrowserAnimationsModule,
     UikitModule,
@@ -24,8 +28,12 @@ import {
     NotFoundModule,
     UnauthorizedModule,
     AuthModule,
-    OidcAuthModule,
+    OidcAuthModule
   ],
-  exports: [AuthLayoutComponent]
+  exports: [AuthLayoutComponent],
+  providers: [
+    // Serviço de pesquisa para o Layout (Shell) que retorna os itens de menus
+    { provide: LOCATION_TOKEN, useValue: window.location },
+  ],
 })
 export class AuthLayoutModule { }
